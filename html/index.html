@@ -5,9 +5,13 @@
       <title> Глейси: главная страница</title>
     </head>
     <body>
+     <input type="radio" id="btn-1" name="slider_1" checked>
+     <input type="radio" id="btn-2" name="slider_2">
+     <input type="radio" id="btn-3" name="slider_3"><!--Поставила слайдер наверх/
+      потому что фон начинается до header/но не уверена что это правильно/теперь не знаю как с описанием соединить-->
       <header>
         <nav>
-          <a href="#"> <img src="#" alt="Логотип Глейси"></a>
+          <a href="logo"> <img src="img/svg/Logo.svg" alt="Логотип Глейси"></a>
           <ul>
             <li><a href="catalog.html">Каталог</a>
              <ul>
@@ -22,19 +26,56 @@
             <li><a href="#">О компании</a></li>
           </ul>
           <ul>
-            <li><a href="#">Поиск</a></li>
-            <li><a href="#">Вход</a></li>
+            <li>
+              <div>
+              <a href="#">Поиск</a>
+            </div>
+            <div>
+              <form action="#" method="get">
+                <input type="search" name="search-form" placeholder="Что ищем?">
+              </form>
+            </div>
+            </li>
+            <li>
+              <div>
+              <a href="#">Вход</a>
+             </div>
+             <div>
+              <form action="#" method="post">
+                <input type="text" name="mail" id="e-mail" placeholder="Электронная почта">
+                <input type="password" name="password" id="password" placeholder="Пароль">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+                <input type="submit" value="Войти">
+                </form>
+              </div>
+            </li>
             <li><a href="#">Пусто</a></li>
           </ul>
         </nav>
-      </header>
-      <div>
+        <div>
         <span >С 10 до 20, ежедневно</span>
         <span >8 812 450-25-25</span>
       </div>
+      </header>
+      <div>
       <div>
         <div>Крем-брюле и пломбир с малиновым джемом</div>
         <a href="#">Давайте оба</a>
+      </div>
+      <div>
+          <div>Шоколадный пломбир и лимонный сорбет</div>
+          <a href="#">Давайте оба!</a>
+      </div>
+      <div>
+      <div>Пломбир с помадкой и клубничный щербет</div>
+      <a href="#">Давайте оба!</a>
+      </div>
+      <div>
+          <label for="btn-1"></label>
+          <label for="btn-2"></label>
+          <label for="btn-3"></label>
+      </div>
       </div>
       <main>
         <section>
@@ -42,7 +83,7 @@
                 <h2>Малинка даром</h2>
                 <p>При покупке 2 кг любого фруктового мороженого,
                    добавим в ваш заказ банку малинового варенья бесплатно.</p>
-                <a href="#">Хочу варенье!</a>
+                <a href="#">Хочу варенье!</a><!--Куда подключить фоновое изображение здесь и ниже?-->
             </div>
             <div>
                 <h2>Шоколадки даром</h2>
@@ -53,8 +94,8 @@
         </section>
         <section>
             <div>
-              <img src="#" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <div>
+              <img src="img/jpeg/1.jpg" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <div> <!--Здесь и ниже 2 разных варианта адреса изображений+в лого/Ни один не работает-->
                 310 &#8381;<span>/кг</span>
               </div>
               <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
@@ -63,8 +104,8 @@
               </div>
             </div>
             <div>
-                <img src="#" alt="Сливочно-кофейное с кусочками шоколада">
-                <div>
+                <img src="1165959-gllacy-26/img/jpeg/2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
+                <div> <!--Не совсем понимаю как добавить хит? дополнительно в див обернуть?-->
                   380 &#8381;<span>/кг</span>
                 </div>
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
@@ -135,8 +176,10 @@
              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
              самого вкусного, что у нас происходит.
              Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-             <!-- Здесь будет форма-->
-             <button type="button">Отправить</button>
+             <form action="#" method="post">
+             <input type="text" name="mail" id="mail" placeholder="Электронная почта">
+             <button type="submit">Отправить</button>
+             </form>
         </section>
         <section>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002678!2d30.32085871549319!3d59.93871916905489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1568123272175!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -154,6 +197,16 @@
             </p>
             <a href="#">Форма обратной связи</a>
           </div>
+          <div>
+          <button type="button" title="Закрыть">Закрыть</button><!--Крестик в Css?-->
+           <span>Мы обязательно вам ответим!</span>
+            <form action="#" method="post">
+                <input id="login" type="text" name="login" placeholder="Как вас зовут?">
+                <label for="login"></label>
+                <input type="text" name="mail" placeholder="Ваша почта для ответа">
+                <textarea name="comment" id="comment-field" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+                <button type="submit">Отправить</button>
+             </form>
       </main>
     <footer>
       <div>
