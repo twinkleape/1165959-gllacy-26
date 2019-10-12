@@ -6,6 +6,7 @@
   <title> Глейси: главная страница</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 
 <body class="inner-body">
@@ -41,7 +42,6 @@
             <li class="main-nav__item">
               <div class="main-nav__btn  main-nav__btn--search">
                 <a href="#">Поиск</a>
-                <!--Здесь наверное дучше убрать ссылку?-->
               </div>
               <div class="main-nav__popup-wrap  main-nav__popup-wrap--large-space">
                 <form class="main-nav__search-form" id="search" action="#" method="get">
@@ -53,7 +53,7 @@
               <div class="main-nav__btn  main-nav__btn--login">
                 <a href="#"></a>>Вход</a>
               </div>
-              <div class="main-nav__popup-wrap">
+              <div class="popup-wrap">
                 <form class="login-form" id="login" action="#" method="post">
                   <input type="text" name="mail" id="e-mail" placeholder="Электронная почта">
                   <input type="password" name="password" id="password" placeholder="Пароль">
@@ -65,16 +65,16 @@
                       <span class="login-form__link-content">Новая регистрация</span>
                     </a>
                   </div>
-                  <input class="btn" type="submit" value="Войти">
+                  <button class="btn" type="submit" value="login">Войти</button>
                 </form>
               </div>
             </li>
             <li class="main-nav__item main-nav__btn--basket"><a href="#">Пусто</a></li>
           </ul>
         </nav>
-          <div class="page-header__contacts">
+        <div class="page-header__contacts">
           <span class="page-header__contacts-time">С 10 до 20, ежедневно</span>
-          <span class="page-header__contacts-number">8 812 450-25-25</span>
+          <a class="page-header__contacts-number" href="8812450-25-25">8 812 450-25-25</a>
         </div>
       </header>
       <div>
@@ -114,6 +114,7 @@
         <section class="adv-hits">
           <h2 class="visually-hidden">Предложения</h2>
           <div class="adv-hits__items">
+
             <div class="product-item">
               <div class="product-item__view  product-item__view--hit">
                 <div class="product-item__img-wrap">
@@ -132,11 +133,13 @@
                 <a class="btn  product-item__btn" href="#">Быстрый просмотр</a>
               </div>
             </div>
+
             <div class="product-item">
               <div class="product-item__view  product-item__view--hit">
                 <div class="product-item__img-wrap">
                   <img class="product-item__img" src="img/content/ice-cream_2.jpg"
                     alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+                </div>
                   <div class="product-item__price">
                     <span class="product-item__cost">380 &#8381;</span>
                     <span class="product-item__sum">/кг</span>
@@ -154,6 +157,7 @@
                   <div class="product-item__img-wrap">
                     <img class="product-item__img" src="img/content/ice-cream_3.jpg"
                       alt="Сливочно-клубничное с присыпкой из белого шоколада" width="267" height="267">
+                  </div>
                     <div class="product-item__price">
                       <span class="product-item__cost">355 &#8381;</span>
                       <span class="product-item__sum">/кг</span>
@@ -171,6 +175,7 @@
                     <div class="product-item__img-wrap">
                       <img class="product-item__img" src="img/content/ice-cream_4.jpg"
                         alt="Сливочное крем-брюле с карамельной подливкой" width="267" height="267">
+                    </div>
                       <div class="product-item__price">
                         <span class="product-item__cost">415 &#8381;</span>
                         <span class="product-item__sum">/кг</span>
@@ -185,56 +190,55 @@
                   </div>
                 </div>
         </section>
-        <section class="shop-descr">
+        <section class="shop-descr clearfix">
           <h2 class="shop-descr__title">Магазин Глейси-это онлайн и офлайн магазин по продаже мороженого собственного
             производства на развеc</h2>
-          <ul class="shop-descr__items">
-            <li class="shop-descr__item">
-              <p class="shop-descr__item shop-descr__item--icecream"> Все наше мороженое изготавливается на собственном
+          <ul class="shop-descr__items shop-descr__items-left">
+            <li class="shop-descr__itemshop-descr__item--icecream">
+               Все наше мороженое изготавливается на собственном
                 производстве, с использованием современного оборудования
-                и проверенных временем технологий.</p>
+                и проверенных временем технологий.
             </li>
-            <li class="shop-descr__item">
-              <p class="shop-descr__item shop-descr__item--cow"> Для приготовления мороженого используются настоящие
+            <li class="shop-descr__item shop-descr__item--cow">
+              Для приготовления мороженого используются настоящие
                 сливки и молоко
                 высочайшего качества. Все дополнительные ингредиенты и
-                добавки произведены из натурального, экологически чистого сырья.</p>
+                добавки произведены из натурального, экологически чистого сырья.
             </li>
-            <li class="shop-descr__item">
-              <p class="shop-descr__item shop-descr__item--leaf">
+          </ul>
+          <ul class="shop-descr__items shop-descr__items-right">
+            <li class="shop-descr__item shop-descr__item--leaf">
                 Закупка ингредиентов производится только у проверенных фермерских
                 хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-              </p>
             </li>
-            <li class="shop-descr__item">
-              <p class="shop-descr__item shop-descr__item--thermometer"> Доставка нашего мороженого до заказчиков
+            <li class="shop-descr__item shop-descr__item--thermometer">
+               Доставка нашего мороженого до заказчиков
                 осуществляется в специальном
                 термопаке, который не дает мороженому растаять в пути и позволяет
                 сохранить превосходный вкус.
-              </p>
             </li>
           </ul>
         </section>
-        <article class="widget">
-          <section class="widget-item>
-            <h2 class="visually-hidden">Виджет</h2>
-            <div class="widget-news__item">
-              <span class="widget-news__blog">Новое в нашем блоге</span>
-              <p class="widget-news__content"><a href="#" class="widget-news__content-link">10 способов сервировки
+        <article class="blog clearfix">
+          <section class="blog-item">
+            <h2 class="visually-hidden">Блог</h2>
+            <div class="blog-item__wrap">
+              <span class="blog-item__title">Новое в нашем блоге</span>
+              <p class="blog-item__content"><a href="#" class="blog-item__content-link">10 способов сервировки
                   фруктовых щербетов
                   к столу</a></p>
             </div>
           </section>
         </article>
-        <section class="vidget-item">
-          <h2 class="visually-hidden">Виджет</h2>
-          <div class="subscribe-widget">
-            <form class="subscribe-widget__form" id="subscribe-form" action="#" method="get">
-              <div class="subscribe-widget__content">
+        <section class="promo-item">
+          <h2 class="visually-hidden">Рассылка</h2>
+          <div class="promo-item__wrap">
+            <form class="promo-item__form" id="promo-form" action="#" method="get">
+              <div class="promo-item__content">
                 Подпишитесь на нашу сладкую рассылку и&nbsp;будете всегда в курсе всего самого вкусного, что у нас
                 происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
               </div>
-              <input type="email" name="subscribe-email" placeholder="Электронная почта" required>
+              <input type="email" name="promo-email" placeholder="Электронная почта" required>
               <input class="btn  btn--small" type="submit" value="Отправить">
             </form>
           </div>
@@ -257,69 +261,68 @@
             <p class="contacts__text">(с 10 до 20 ежедневно)</p>
           </div>
           <a href="#" class="btn  contacts__btn-feedback">Форма обратной связи</a>
-          <div class="overlay"></div>
-          <div class="popup">
-            <button class="popup__close" type="button"></button>
-            <p class="popup__title">Мы обязательно вам ответим!</p>
-            <form action="#" method="post">
-              <div class="popup__input-wrapper">
-                <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Как вас зовут?">
-                <label class="popup__label" for="popup-name">Как вас зовут?</label>
-              </div>
-              <div class="popup__input-wrapper">
-                <input class="popup__input" type="text" name="email" id="popup-email"
-                  placeholder="Ваша почта для ответа?">
-                <label class="popup__label" for="popup-email">Ваша почта для ответа?</label>
-              </div>
-              <div class="popup__input-wrapper">
-                <textarea class="popup__textarea" placeholder="Напишите что-нибудь..." rows="4"
-                  id="textarea"></textarea>
-                <label class="popup__label" for="textarea">Напишите что-нибудь</label>
-              </div>
-              <button class="button button--popup" type="submit" value="send">Отправить</button>
-            </form>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <div class="social-links">
+          <h2 class="visually-hidden">Мы в социальных сетях</h2>
+          <ul class="social-links__items">
+            <li class="social-links__item"><a class="social-links__item  social-links__item--tw"
+                href="https://twitter.com" target="blank"> twitter</a></li>
+            <li class="social-links__item"><a class="social-links__item  social-links__item--inst"
+                href="https://www.instagram.com" target="blank"> instagram</a></li>
+            <li class="social-links__item"> <a class="social-links__item  social-links__item--fb"
+                href="https://ru-ru.facebook.com/" target="blank"> facebook </a></li>
+            <li class="social-links__item"><a class="social-links__item  social-links__item--vk" href="https://vk.com"
+                target="blank"> VKontakte</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__nav">
+          <div class="page-footer__nav-wrap">
+            <ul class="page-footer__nav-items">
+              <li class="page-footer__nav-item"> <a class="page-footer__nav-link" href="#">Для поставщиков</li></a>
+              <li class="page-footer__nav-item"> <a class="page-footer__nav-link" href="#">О производстве</li></a>
+            </ul>
           </div>
+          <div class="page-footer__nav-wrap">
+            <ul class="page-footer__nav-items">
+              <li class="page-footer__nav-item"><a class="page-footer__nav-link" href="#">Наши документы</li></a>
+              <li class="page-footer__nav-item"><a class="page-footer__nav-link" href="#"> Экологические стандарты</li>
+              </a>
+            </ul>
+          </div>
+          <div class="page-footer__copyright">
+            <a href="#" class="page-footer__copyright-link"><img class="page-footer__copyright-logo"
+                src="img/decor/logo-htmlacademy-small.svg" width="108" height="38" alt="HTML Academy"></a>
+            <p class="page-footer__copyright-label">
+              Сделано в
+              <a class="page-footer__link" href="https://htmlacademy.ru">
+                <span class="page-footer__link-content">HTML Academy</span></a> &copy; 2017
+            </p>
+          </div>
+      </footer>
+      <div class="overlay">
+        <div class="popup">
+          <button class="popup__close" type="button"></button>
+          <p class="popup__title">Мы обязательно вам ответим!</p>
+          <form action="#" method="post">
+            <div class="popup__input-wrapper">
+              <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Как вас зовут?">
+              <label class="popup__label" for="popup-name">Как вас зовут?</label>
+            </div>
+            <div class="popup__input-wrapper">
+              <input class="popup__input" type="text" name="email" id="popup-email"
+                placeholder="Ваша почта для ответа?">
+              <label class="popup__label" for="popup-email">Ваша почта для ответа?</label>
+            </div>
+            <div class="popup__input-wrapper">
+              <textarea class="popup__textarea" placeholder="Напишите что-нибудь..." rows="4" id="textarea"></textarea>
+              <label class="popup__label" for="textarea">Напишите что-нибудь</label>
+            </div>
+            <button class="button button--popup" type="submit" value="send">Отправить</button>
+          </form>
         </div>
-    </div>
-    </main>
-    <footer class="page-footer">
-      <div class="social-links">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social-links__items">
-          <li class="social-links__item"><a class="social-links__item  social-links__item--tw"
-              href="https://twitter.com" target="blank"> twitter</a></li>
-          <li class="social-links__item"><a class="social-links__item  social-links__item--inst"
-              href="https://www.instagram.com" target="blank"> instagram</a></li>
-          <li class="social-links__item"> <a class="social-links__item  social-links__item--fb"
-              href="https://ru-ru.facebook.com/" target="blank"> facebook </a></li>
-          <li class="social-links__item"><a class="social-links__item  social-links__item--vk" href="https://vk.com"
-              target="blank"> VKontakte</a></li>
-        </ul>
       </div>
-      <div class="page-footer__nav">
-        <div class="page-footer__nav-wrap">
-          <ul class="page-footer__nav-items">
-            <li class="page-footer__nav-item"> <a class="page-footer__nav-link" href="#">Для поставщиков</li></a>
-            <li class="page-footer__nav-item"> <a class="page-footer__nav-link" href="#">О производстве</li></a>
-          </ul>
-        </div>
-        <div class="page-footer__nav-wrap">
-          <ul class="page-footer__nav-items">
-            <li class="page-footer__nav-item"><a class="page-footer__nav-link" href="#">Наши документы</li></a>
-            <li class="page-footer__nav-item"><a class="page-footer__nav-link" href="#"> Экологические стандарты</li>
-            </a>
-          </ul>
-        </div>
-        <div class="page-footer__copyright">
-          <a href="#" class="page-footer__copyright-link"><img class="page-footer__copyright-logo"
-              src="img/decor/logo-htmlacademy-small.svg" width="108" height="38" alt="HTML Academy"></a>
-          <p class="page-footer__copyright-label">
-            Сделано в
-            <a class="page-footer__link" href="https://htmlacademy.ru">
-              <span class="page-footer__link-content">HTML Academy</span></a> &copy; 2017
-          </p>
-        </div>
-    </footer>
 </body>
 
 </html>
